@@ -11,15 +11,18 @@
       };
     },
     render: function(){
-      var data, d;
+      var data, i, d;
       data = this.props.data;
       return div({
         className: 'questions'
       }, (function(){
-        var i$, ref$, len$, results$ = [];
-        for (i$ = 0, len$ = (ref$ = data).length; i$ < len$; ++i$) {
-          d = ref$[i$];
-          results$.push(QuestionItem());
+        var ref$, results$ = [];
+        for (i in ref$ = data) {
+          d = ref$[i];
+          results$.push(QuestionItem({
+            key: i,
+            data: d
+          }));
         }
         return results$;
       }()));

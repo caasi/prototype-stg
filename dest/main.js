@@ -1,7 +1,28 @@
 (function(){
-  var React, App;
+  var React, Test, fake, data, res$, i$, i;
   React = require('react');
-  App = require('./app/app');
-  require('./app/app.css');
-  React.renderComponent(App(), document.getElementById('container'));
+  Test = require('./app/Test');
+  require('./app/Test.css');
+  fake = {
+    original: {
+      title: 'babble',
+      uri: 'original',
+      samples: [
+        {
+          uri: 'sample/0'
+        }, {
+          uri: 'sample/1'
+        }
+      ]
+    }
+  };
+  res$ = [];
+  for (i$ = 0; i$ < 100; ++i$) {
+    i = i$;
+    res$.push(fake);
+  }
+  data = res$;
+  React.renderComponent(Test({
+    data: data
+  }), document.getElementById('container'));
 }).call(this);

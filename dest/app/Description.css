@@ -11,8 +11,9 @@
   left: 0;
   bottom: 8rem;
   width: 32rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
   background-color: rgba(255,255,255,0.8);
+  border-bottom-right-radius: 1rem;
   color: #16161d;
 }
 .description .content h1 {
@@ -42,7 +43,7 @@
 }
 .description .content a.background-author {
   position: absolute;
-  right: 1rem;
+  right: 2rem;
   bottom: 1rem;
   color: #666;
   font-size: 0.8rem;

@@ -1,0 +1,44 @@
+@import 'nib'
+
+.slider
+  display block
+  float left
+  width  300px
+  height 30px
+  background-color rgb(56,56,56)
+  border-radius 5px
+  input[type=range]
+    appearance none !important
+    width  250px
+    height 10px
+    margin 10px 0 10px 10px
+    background linear-gradient(to right, #888, #fff)
+    transition all 0.5s ease
+    border-radius 2px
+    box-shadow 0 0 2px darken(#000, 15%)
+    &:active
+      background-color lighten(#600, 40%)
+    // comma separated doesn't work here
+    &::-webkit-slider-thumb
+      appearance none
+      width  2px
+      height 20px
+      border-radius 5px
+      background-color #eee
+      box-shadow 0 0 9px rgba(0, 0, 0, 0.7)
+    &::-moz-range-thumb
+      appearance none
+      width  2px
+      height 20px
+      border-radius 5px
+      background-color #eee
+      box-shadow 0 0 9px rgba(0, 0, 0, 0.3)
+  label
+    display inline-block
+    width 30px
+    height 30px
+    line-height 30px
+    margin-right 10px
+    font-size medium
+    color white
+    text-align right

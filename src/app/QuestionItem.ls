@@ -1,5 +1,6 @@
 React = require 'react'
 Description = require './Description'
+Slider = require './Slider'
 
 { h4, h5, ol, li, audio, div } = React.DOM
 
@@ -19,7 +20,8 @@ QuestionItem = React.createClass do
       className: 'question-item'
       h4 {}, data.original.title
       h5 {}, '(Original)'
-      div {},
+      div do
+        className: 'original'
         audio do
           controls: on
           src: data.original.uri
@@ -30,13 +32,14 @@ QuestionItem = React.createClass do
         li {}, 'poor'
         li {}, 'fair'
         li {}, 'good'
-        li {}, 'excellent'
+        li {}, 'great'
       for i, sample of data.samples
         div do
           key: i
+          className: 'sample'
           audio do
             controls: on
             src: sample.uri
-          div className: 'slider', 'slider here'
+          Slider!
 
 module.exports = QuestionItem

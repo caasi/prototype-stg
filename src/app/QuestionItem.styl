@@ -1,9 +1,11 @@
+@require 'Slider'
+
 .question-item
   overflow hidden
   background rgba(255,255,255,0.8)
-  padding 1rem
+  padding 10px
   margin-bottom 2rem
-  width 100%
+  width 630px
   border-radius 0.5rem
   h4
     font-size 1.2rem
@@ -12,21 +14,40 @@
     font-weight bold
     margin-top 1rem
     margin-bottom 0.5rem
-  audio
-    margin-right 5%
+  .original
+  .sample
+    display block
+    height 30px
+    width 610px
+    margin-bottom 0.5rem
+    audio
+      display block
+      float left
+      margin-right 10px
+  .original
+    width 100%
   .sample-title
     display inline-block
-    width 55%
+    width 300px
+    margin-right 10px
   ol.markarea
     display inline-block
-    clear right
-    width 40%
-    font-size 0.8rem
+    width 250px
+    margin 0 40px 0 10px
+    font-size 0.4rem
     li
       display inline-block
       text-align center
       width 20%
-  .slider
-    display inline-block
+      &:nth-child(1)
+        background-color #f00
+      &:nth-child(2)
+        background-color #f88
+      &:nth-child(3)
+        background-color #fff
+      &:nth-child(4)
+        background-color #8f8
+      &:nth-child(5)
+        background-color #0f0
   .description
     position absolute

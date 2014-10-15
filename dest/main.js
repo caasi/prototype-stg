@@ -16,7 +16,7 @@
     ]
   };
   res$ = [];
-  for (i$ = 0; i$ < 100; ++i$) {
+  for (i$ = 0; i$ < 50; ++i$) {
     i = i$;
     res$.push(fake);
   }

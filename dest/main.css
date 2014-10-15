@@ -111,19 +111,15 @@ html * {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  width: 40rem;
-  height: 480px;
-  margin: auto;
+  bottom: 8rem;
+  width: 32rem;
   padding: 2rem;
-  -webkit-border-radius: 1rem;
-  border-radius: 1rem;
   background-color: rgba(255,255,255,0.8);
   color: #16161d;
 }
 .description .content h1 {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .description .content h2 {
   font-size: 0.8rem;
@@ -159,20 +155,18 @@ html * {
 }
 .questions {
   position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  padding-top: 55%;
+  top: 1rem;
+  left: 34rem;
   width: 38rem;
 }
 .question-item {
   overflow: hidden;
-  background: #fff;
+  background: rgba(255,255,255,0.8);
   padding: 1rem;
   margin-bottom: 2rem;
   width: 100%;
-  -webkit-border-radius: 1rem;
-  border-radius: 1rem;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 .question-item h4 {
   font-size: 1.2rem;

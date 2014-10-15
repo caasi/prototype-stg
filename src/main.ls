@@ -8,7 +8,7 @@ fake =
   samples:
     * uri: 'sample/0'
     * uri: 'sample/1'
-data = for i from 0 til 100 => fake
+data = for i from 0 til 50 => fake
 
 React.renderComponent do
   Test data: data

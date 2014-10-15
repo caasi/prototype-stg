@@ -2,19 +2,18 @@
   var React, Test, fake, data, res$, i$, i;
   React = require('react');
   Test = require('./app/Test');
-  require('./app/Test.css');
   fake = {
     original: {
       title: 'babble',
-      uri: 'original',
-      samples: [
-        {
-          uri: 'sample/0'
-        }, {
-          uri: 'sample/1'
-        }
-      ]
-    }
+      uri: 'original'
+    },
+    samples: [
+      {
+        uri: 'sample/0'
+      }, {
+        uri: 'sample/1'
+      }
+    ]
   };
   res$ = [];
   for (i$ = 0; i$ < 100; ++i$) {

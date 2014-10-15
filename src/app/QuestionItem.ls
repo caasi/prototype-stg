@@ -1,6 +1,7 @@
 React = require 'react'
+Description = require './Description'
 
-{ table, thead, tr, th, td, audio, div } = React.DOM
+{ h4, h5, ol, li, audio, div } = React.DOM
 
 QuestionItem = React.createClass do
   displayName: 'Lunadance.QuestionItem'
@@ -14,37 +15,30 @@ QuestionItem = React.createClass do
         * uri: 'sample 1'
   render: ->
     data = @props.data
-    table {},
-      thead {},
-        tr {},
-          th do
-            col-span: 2
-            data.original.title
-        tr {},
-          td {}, '(Original)'
-        tr {},
-          td {},
-            audio do
-              controls: on
-              src: data.original.uri
-        tr className: 'blank_row'
-        tr {},
-          td {}, '(Generated Samples)'
-          td do
-            className: 'questitem_markarea_'
-            div className: 'questitem_marks_ch', 'bad'
-            div className: 'questitem_marks_ch', 'poor'
-            div className: 'questitem_marks_ch', 'fair'
-            div className: 'questitem_marks_ch', 'good'
-            div className: 'questitem_lastmark_ch', 'excellent'
-        for i, sample of data.samples
-          tr do
-            key: i
-            td {},
-              audio do
-                controls: on
-                src: sample.uri
-            #td {},
-            #  QuestionSlider!
+    div do
+      className: 'question-item'
+      Description do
+        className: 'glass'
+      h4 {}, data.original.title
+      h5 {}, '(Original)'
+      div {},
+        audio do
+          controls: on
+          src: data.original.uri
+      h5 className: 'sample-title', '(Generated Samples)'
+      ol do
+        className: 'markarea'
+        li {}, 'bad'
+        li {}, 'poor'
+        li {}, 'fair'
+        li {}, 'good'
+        li {}, 'excellent'
+      for i, sample of data.samples
+        div do
+          key: i
+          audio do
+            controls: on
+            src: sample.uri
+          div className: 'slider', 'slider here'
 
 module.exports = QuestionItem

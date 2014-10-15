@@ -1,15 +1,8 @@
 (function(){
-  var $, React, Description, ref$, h4, h5, ol, li, audio, div, $win, dim, QuestionItem;
-  $ = require('jquery');
+  var React, Description, ref$, h4, h5, ol, li, audio, div, QuestionItem;
   React = require('react');
   Description = require('./Description');
   ref$ = React.DOM, h4 = ref$.h4, h5 = ref$.h5, ol = ref$.ol, li = ref$.li, audio = ref$.audio, div = ref$.div;
-  $win = $(window);
-  dim = {
-    width: $win.width(),
-    height: $win.height()
-  };
-  console.log(dim);
   QuestionItem = React.createClass({
     displayName: 'Lunadance.QuestionItem',
     getDefaultProps: function(){
@@ -29,30 +22,9 @@
         }
       };
     },
-    getInitialState: function(){
-      return {
-        offset: {
-          left: 0,
-          top: 0
-        }
-      };
-    },
-    componentDidMount: function(){
-      var $e, this$ = this;
-      $e = $(this.getDOMNode());
-      this.setState({
-        offset: $e.offset()
-      });
-      return $win.on('scroll', function(){
-        return this$.setState({
-          offset: $e.offset()
-        });
-      });
-    },
     render: function(){
-      var data, offset, i, sample;
+      var data, i, sample;
       data = this.props.data;
-      offset = this.state.offset;
       return div({
         className: 'question-item'
       }, h4({}, data.original.title), h5({}, '(Original)'), div({}, audio({
